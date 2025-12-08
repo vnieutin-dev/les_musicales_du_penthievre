@@ -1,0 +1,222 @@
+@import "./palette.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+h2 {
+    font-weight: 400;
+    margin: 0 0 50px;
+}
+
+button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 13px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+button:active {
+    background-color: var(--btn-active-bg);
+}
+
+.page-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+section {
+    margin: 20px 0 40px;
+}
+
+.section-title {
+    width: fit-content;
+    border-top: 3px black solid;
+    font-size: 45px;
+    line-height: 50px;
+    margin: 0 auto 60px;
+    color: var(--section-title-text);
+}
+
+.section-content {
+    column-count: 3;
+    column-gap: 50px;
+    text-align: justify;
+    margin-bottom: 60px;
+}
+
+.subsection-title {
+    text-align: left;
+    border-bottom: 4px solid ;
+    color: var(--section-title-text);
+}
+
+.subsubsection-title {
+    font-weight: 400;
+    margin: 0;
+    color: var(--section-title-text);
+}
+
+.festival-events-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.festival-events-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1080px;
+    margin-bottom: 40px;
+}
+
+.event-container {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.festival-events-wrapper > .event-container:first-of-type {
+    align-items: flex-end;
+    border-right: 2px rgb(59, 0, 0) solid;
+}
+
+.festival-events-wrapper > .event-container:last-of-type {
+    padding-top: 40px;
+    align-items: flex-start;
+    border-left: 2px rgb(59, 0, 0) solid;
+}
+
+.event-date {
+    width: fit-content;
+    padding: 20px;
+    color: rgb(255, 245, 224);
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 20px;
+    color: rgb(59, 0, 0);
+}
+
+.festival-events-wrapper > .event-container:first-of-type .event-details {
+    align-items: flex-end;
+    padding-right: 15px;
+}
+
+.festival-events-wrapper > .event-container:last-of-type .event-details {
+    align-items: flex-start;
+    padding-left: 15px;
+}
+
+.festival-events-wrapper > .event-container:first-of-type .event-details > * {
+    text-align: end;
+}
+
+.festival-events-wrapper > .event-container:last-of-type .event-details > * {
+    text-align: start;
+}
+
+.festival-events-wrapper > .event-container:first-of-type .event-date {
+    align-items: flex-end;
+    background-color: rgb(150, 0, 0);
+}
+
+.festival-events-wrapper > .event-container:last-of-type .event-date {
+    background-color: rgb(255, 137, 33);
+}
+
+.event-time {
+    font-weight: bold;
+    color: rgb(201, 47, 0);
+}
+
+.event-group {
+    font-weight: bold;
+}
+
+.event-performance {
+    font-style: italic;
+}
+
+.practical-info-items {
+    display: flex;
+}
+
+.practical-info-item {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    text-align: left;
+}
+
+.practical-info-img {
+    width: 100px;
+}
+
+.practical-info-txt {
+    margin-left: 20px;
+}
+
+.practical-info-txt-date {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.practical-info-map {
+    margin-top: 50px;
+    height: 700px;
+}
+
+.practical-info-subsection {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.practical-info-subsection-items {
+    display: flex;
+    text-align: left;
+}
+
+.practical-info-subsection-items > * {
+    flex: 1;
+}
+
+.practical-info-subsection-items > :nth-child(2) {
+    margin: 0 40px;
+}
+
+.practical-info-subsection-items p {
+    margin: 0;
+}
+
+.practical-info-subsection-items ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.subsubsection-footnote {
+    margin: 0 0 20px;
+    text-align: right;
+    font-style: italic;
+    font-size: 20px;
+}

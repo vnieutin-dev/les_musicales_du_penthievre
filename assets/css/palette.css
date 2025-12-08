@@ -1,0 +1,16 @@
+:root {
+  --primary: #4CAF50;
+  --secondary: #FFC107;
+  --background: rgb(255, 216, 166);
+  --text: rgb(49, 26, 26);
+
+  --btn-bg: rgb(255, 238, 192);
+  --btn-text: rgb(170, 0, 0);
+  --btn-hover-bg: rgb(255, 240, 198);
+  --btn-active-bg: rgb(255, 238, 192);
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.ttf');
+}
