@@ -165,8 +165,12 @@ section {
 .practical-info-item {
     display: flex;
     flex-grow: 1;
-    align-items: center;
+    align-items: flex-end;
     text-align: left;
+}
+
+.practical-info-item:last-child {
+    justify-content: flex-end;
 }
 
 .practical-info-img {
@@ -183,8 +187,9 @@ section {
 }
 
 .practical-info-map {
-    margin-top: 50px;
-    height: 700px;
+    margin: 50px;
+    height: 600px;
+    max-width: 85%;
 }
 
 .practical-info-subsection {
