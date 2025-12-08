@@ -1,5 +1,9 @@
 @import "./palette.css";
 
+/**
+* Default style overwrite
+**/
+
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +12,24 @@ body {
     font-size: 20px;
     background-color: var(--background);
     color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    width: fit-content;
+    border-top: 3px var(--section-title-text) solid;
+    font-size: 45px;
+    line-height: 50px;
+    margin: 0 auto 60px;
+    color: var(--section-title-text);
 }
 
 h2 {
@@ -65,7 +87,7 @@ section {
 
 .subsection-title {
     text-align: left;
-    border-bottom: 4px solid ;
+    border-bottom: 4px solid;
     color: var(--section-title-text);
 }
 
@@ -74,6 +96,10 @@ section {
     margin: 0;
     color: var(--section-title-text);
 }
+
+/**
+* Festival page
+**/
 
 .festival-events-container {
     display: flex;
@@ -94,12 +120,12 @@ section {
     flex-direction: column;
 }
 
-.festival-events-wrapper > .event-container:first-of-type {
+.festival-events-wrapper>.event-container:first-of-type {
     align-items: flex-end;
     border-right: 2px rgb(59, 0, 0) solid;
 }
 
-.festival-events-wrapper > .event-container:last-of-type {
+.festival-events-wrapper>.event-container:last-of-type {
     padding-top: 40px;
     align-items: flex-start;
     border-left: 2px rgb(59, 0, 0) solid;
@@ -118,30 +144,30 @@ section {
     color: rgb(59, 0, 0);
 }
 
-.festival-events-wrapper > .event-container:first-of-type .event-details {
+.festival-events-wrapper>.event-container:first-of-type .event-details {
     align-items: flex-end;
     padding-right: 15px;
 }
 
-.festival-events-wrapper > .event-container:last-of-type .event-details {
+.festival-events-wrapper>.event-container:last-of-type .event-details {
     align-items: flex-start;
     padding-left: 15px;
 }
 
-.festival-events-wrapper > .event-container:first-of-type .event-details > * {
+.festival-events-wrapper>.event-container:first-of-type .event-details>* {
     text-align: end;
 }
 
-.festival-events-wrapper > .event-container:last-of-type .event-details > * {
+.festival-events-wrapper>.event-container:last-of-type .event-details>* {
     text-align: start;
 }
 
-.festival-events-wrapper > .event-container:first-of-type .event-date {
+.festival-events-wrapper>.event-container:first-of-type .event-date {
     align-items: flex-end;
     background-color: rgb(150, 0, 0);
 }
 
-.festival-events-wrapper > .event-container:last-of-type .event-date {
+.festival-events-wrapper>.event-container:last-of-type .event-date {
     background-color: rgb(255, 137, 33);
 }
 
@@ -202,11 +228,11 @@ section {
     text-align: left;
 }
 
-.practical-info-subsection-items > * {
+.practical-info-subsection-items>* {
     flex: 1;
 }
 
-.practical-info-subsection-items > :nth-child(2) {
+.practical-info-subsection-items> :nth-child(2) {
     margin: 0 40px;
 }
 
@@ -224,4 +250,52 @@ section {
     text-align: right;
     font-style: italic;
     font-size: 20px;
+}
+
+
+/**
+* Header
+**/
+header {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 40px;
+    text-align: right;
+    background-color: var(--secondary-bg);
+}
+
+header>button {
+    margin: 30px 30px 0 0;
+}
+
+/**
+* Footer
+**/
+footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* height: 200px; */
+    padding: 40px 0;
+    color: var(--background);
+    background-color: var(--secondary-bg);
+}
+
+footer > * {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer h1 {
+    font-size: 35px;
+}
+
+.footer-date {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    font-size: 35px;
+    font-weight: 500;
+    border: 3px var(--background) solid;
 }

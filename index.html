@@ -12,9 +12,11 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.0/papaparse.min.js"></script>
 </head>
 
-<body>
+<body x-data="festivalProgram">
+    <div id="header"></div>
+
     <main>
-        <div class="page-container" x-data="festivalProgram">
+        <div class="page-container">
             <section>
                 <h1 class="section-title">Festival de musique classique</h1>
                 <p class="section-content">
@@ -140,6 +142,10 @@
             </section>
         </div>
     </main>
+
+    <div id="footer"></div>
+
+    <script src="assets/js/include.js"></script>
 </body>
 
 </html>

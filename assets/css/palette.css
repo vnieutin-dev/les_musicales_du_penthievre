@@ -8,6 +8,9 @@
   --btn-text: rgb(170, 0, 0);
   --btn-hover-bg: rgb(255, 240, 198);
   --btn-active-bg: rgb(255, 238, 192);
+
+  --secondary-bg: rgb(53, 20, 4);
+  --secondary-text: rgb(53, 20, 4);
 }
 
 @font-face {
