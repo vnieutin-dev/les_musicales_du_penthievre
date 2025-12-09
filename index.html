@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -16,131 +16,127 @@
     <div id="header"></div>
 
     <main>
-        <div class="page-container">
-            <section>
-                <h1 class="section-title">Festival de musique classique</h1>
-                <p class="section-content">
-                    Rovit volenimo inum dolorro optatume seditibus aut es sum consers peliquibusci velesti oratum
-                    quossuntis acia incid quaera dolorer cipicid quam et il moditiis eos eum aliquun teniam fugia
-                    voluptatio modis dolut estiam enihillest aut ut idende conet vidus. Quat abore doluptur re vent que
-                    nis aut et, es del initemq uassequas eat offic te ipicitae voluptat es que eatiam faciis dollupt
-                    atusaped minimpelicid minctae et maiorerferio berum sin nus rerrorae venist, qui adi cusam,
-                    cusciisti cuptates ni as audanienihic toreptat exces explige ntoria doluptas parum illorerumqui
-                    quodi tem ad eum fuga. Ut et eiur molende llabor santur? Qui dolor magni core peria volupti cori
-                    omnist untur molorep elessintio occus re nihiliquid ulluptis iunti consed ent ate et offictat.
-                </p>
-                <button>BILLETTERIE</button>
-            </section>
+        <section>
+            <h1 class="section-title">Festival de musique classique</h1>
+            <p class="section-content">
+                Rovit volenimo inum dolorro optatume seditibus aut es sum consers peliquibusci velesti oratum
+                quossuntis acia incid quaera dolorer cipicid quam et il moditiis eos eum aliquun teniam fugia
+                voluptatio modis dolut estiam enihillest aut ut idende conet vidus. Quat abore doluptur re vent que
+                nis aut et, es del initemq uassequas eat offic te ipicitae voluptat es que eatiam faciis dollupt
+                atusaped minimpelicid minctae et maiorerferio berum sin nus rerrorae venist, qui adi cusam,
+                cusciisti cuptates ni as audanienihic toreptat exces explige ntoria doluptas parum illorerumqui
+                quodi tem ad eum fuga. Ut et eiur molende llabor santur? Qui dolor magni core peria volupti cori
+                omnist untur molorep elessintio occus re nihiliquid ulluptis iunti consed ent ate et offictat.
+            </p>
+            <button>BILLETTERIE</button>
+        </section>
 
-            <section>
-                <h1 class="section-title">Programmation</h1>
-                <div class="festival-events-wrapper">
-                    <template x-for="(events, date) in groupedEvents" :key="date">
-                        <div class="event-container">
-                            <h2 x-text="formatProgrammationDate(date)" class="event-date"></h2>
-                            <template x-for="event in events" :key="event.Groupe + event.Heure">
-                                <div class="event-details">
-                                    <div class="event-time" x-text="formatTime(event.Heure)"></div>
-                                    <div class="event-group" x-text="event.Groupe"></div>
-                                    <div class="event-artists" x-text="event.Artistes"></div>
-                                    <div class="event-performance" x-text="event.Interprétations"></div>
-                                </div>
-                            </template>
-                        </div>
-                    </template>
-                </div>
-                <button>BILLETTERIE</button>
-            </section>
-
-            <section>
-                <h1 class="section-title">Informations pratiques</h1>
-                <div class="practical-info-items">
-                    <div class="practical-info-item">
-                        <img class="practical-info-img" src="https://cdn-icons-png.flaticon.com/512/484/484167.png"
-                            alt="">
-                        <div class="practical-info-txt">
-                            <span style="font-weight: bold;">Église St Nicolas et St Guillaume</span></br>
-                            4 Rue Abbé Philoux, 22550 Hénanbihen
-                        </div>
+        <section>
+            <h1 class="section-title">Programmation</h1>
+            <div class="festival-events-wrapper">
+                <template x-for="(events, date) in groupedEvents" :key="date">
+                    <div class="event-container">
+                        <h2 x-text="formatProgrammationDate(date)" class="event-date"></h2>
+                        <template x-for="event in events" :key="event.Groupe + event.Heure">
+                            <div class="event-details">
+                                <div class="event-time" x-text="formatTime(event.Heure)"></div>
+                                <div class="event-group" x-text="event.Groupe"></div>
+                                <div class="event-artists" x-text="event.Artistes"></div>
+                                <div class="event-performance" x-text="event.Interprétations"></div>
+                            </div>
+                        </template>
                     </div>
-                    <div class="practical-info-item">
-                        <img class="practical-info-img" src="https://cdn-icons-png.flaticon.com/512/747/747310.png"
-                            alt="">
-                        <div class="practical-info-txt practical-info-txt-date" x-text="festivalDates">
-                        </div>
+                </template>
+            </div>
+            <button>BILLETTERIE</button>
+        </section>
+
+        <section>
+            <h1 class="section-title">Informations pratiques</h1>
+            <div class="practical-info-items">
+                <div class="practical-info-item">
+                    <img class="practical-info-img" src="https://cdn-icons-png.flaticon.com/512/484/484167.png" alt="">
+                    <div class="practical-info-txt">
+                        <span style="font-weight: bold;">Église St Nicolas et St Guillaume</span></br>
+                        4 Rue Abbé Philoux, 22550 Hénanbihen
                     </div>
                 </div>
-                <iframe class="practical-info-map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4397.560017272051!2d-2.3781629225377903!3d48.56007562165202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480e73c1ddfb4ef5%3A0x7d387536cc00f392!2sÉglise St Nicolas et St Guillaume!5e1!3m2!1sen!2sfr!4v1764858073322!5m2!1sen!2sfr"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                <div class="practical-info-subsection">
-                    <h3 class="subsection-title">ACCÈS</h3>
-                    <div class="practical-info-subsection-items">
-                        <div>
-                            <h4 class="subsubsection-title">PLACEMENT EN SALLE</h4>
-                            <p>Toutes les salles sont accessibles aux personnes en fauteuil.
-                                Si vous êtes accompagné, merci de nous le signaler.</p>
-                        </div>
-                        <div>
-                            <h4 class="subsubsection-title">VOITURE</h4>
-                            <p>Des parking gratuits pour les véhicules sont disponibles dans le village.</p>
-                        </div>
-                        <div>
-                            <h4 class="subsubsection-title">BUS</h4>
-                            <p>
-                                Depuis Lamballe - N°XX</br>
-                                Depuis Erquy - N°XX</br>
-                                Depuis Saint-Cast-Le-Guildo - N°XX
-                            </p>
-                        </div>
+                <div class="practical-info-item">
+                    <img class="practical-info-img" src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="">
+                    <div class="practical-info-txt practical-info-txt-date" x-text="festivalDates">
                     </div>
                 </div>
+            </div>
+            <iframe class="practical-info-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4397.560017272051!2d-2.3781629225377903!3d48.56007562165202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480e73c1ddfb4ef5%3A0x7d387536cc00f392!2sÉglise St Nicolas et St Guillaume!5e1!3m2!1sen!2sfr!4v1764858073322!5m2!1sen!2sfr"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                <div class="practical-info-subsection">
-                    <h3 class="subsection-title">TARIFS</h3>
-                    <div class="practical-info-subsection-items">
-                        <p>25 € - Plein</p>
-                        <p>20 € - Adhérent</p>
-                        <p>15 € - Réduit</p>
+            <div class="practical-info-subsection">
+                <h3 class="subsection-title">ACCÈS</h3>
+                <div class="practical-info-subsection-items">
+                    <div>
+                        <h4 class="subsubsection-title">PLACEMENT EN SALLE</h4>
+                        <p>Toutes les salles sont accessibles aux personnes en fauteuil.
+                            Si vous êtes accompagné, merci de nous le signaler.</p>
+                    </div>
+                    <div>
+                        <h4 class="subsubsection-title">VOITURE</h4>
+                        <p>Des parking gratuits pour les véhicules sont disponibles dans le village.</p>
+                    </div>
+                    <div>
+                        <h4 class="subsubsection-title">BUS</h4>
+                        <p>
+                            Depuis Lamballe - N°XX</br>
+                            Depuis Erquy - N°XX</br>
+                            Depuis Saint-Cast-Le-Guildo - N°XX
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="practical-info-subsection">
-                    <h3 class="subsection-title">RÉDUCTIONS*</h3>
-                    <div class="practical-info-subsection-items">
-                        <div>
-                            <h4 class="subsubsection-title">TARIF ADHÉRENT</h4>
-                            <ul>
-                                <li>Membres de l’Association du Festival</li>
-                                <li>Groupes de plus de 10 personnes</li>
-                                <li>Comités d’entreprise : selon accords, se renseigner auprès de sa structure</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="subsubsection-title">TARIF RÉDUIT</h4>
-                            <ul>
-                                <li>Demandeurs d’emploi</li>
-                                <li>Allocataires RSA et AAH</li>
-                                <li>Étudiants de moins de 30 ans</li>
-                                <li>Carte Avantages Jeunes</li>
-                                <li>Moins de 18 ans</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="subsubsection-title">GRATUIT</h4>
-                            <p>Une place offerte pour un enfant de moins de 12 ans pour une place adulte achetée.
-                                Sauf concerts à tarif unique</p>
-                        </div>
-                    </div>
-                    <p class="subsubsection-footnote">*Réductions nominatives et individuelles.</br>
-                        Justificatifs de réduction à fournir pour toute réservation et à présenter lors du retrait des
-                        places.</p>
+            <div class="practical-info-subsection">
+                <h3 class="subsection-title">TARIFS</h3>
+                <div class="practical-info-subsection-items">
+                    <p>25 € - Plein</p>
+                    <p>20 € - Adhérent</p>
+                    <p>15 € - Réduit</p>
                 </div>
-                <button>BILLETTERIE</button>
-            </section>
-        </div>
+            </div>
+
+            <div class="practical-info-subsection">
+                <h3 class="subsection-title">RÉDUCTIONS*</h3>
+                <div class="practical-info-subsection-items">
+                    <div>
+                        <h4 class="subsubsection-title">TARIF ADHÉRENT</h4>
+                        <ul>
+                            <li>Membres de l’Association du Festival</li>
+                            <li>Groupes de plus de 10 personnes</li>
+                            <li>Comités d’entreprise : selon accords, se renseigner auprès de sa structure</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="subsubsection-title">TARIF RÉDUIT</h4>
+                        <ul>
+                            <li>Demandeurs d’emploi</li>
+                            <li>Allocataires RSA et AAH</li>
+                            <li>Étudiants de moins de 30 ans</li>
+                            <li>Carte Avantages Jeunes</li>
+                            <li>Moins de 18 ans</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="subsubsection-title">GRATUIT</h4>
+                        <p>Une place offerte pour un enfant de moins de 12 ans pour une place adulte achetée.
+                            Sauf concerts à tarif unique</p>
+                    </div>
+                </div>
+                <p class="subsubsection-footnote">*Réductions nominatives et individuelles.</br>
+                    Justificatifs de réduction à fournir pour toute réservation et à présenter lors du retrait des
+                    places.</p>
+            </div>
+            <button>BILLETTERIE</button>
+        </section>
     </main>
 
     <div id="footer"></div>

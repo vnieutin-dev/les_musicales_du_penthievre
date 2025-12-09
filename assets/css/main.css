@@ -41,7 +41,10 @@ h2 {
 button {
     all: unset;
     display: inline-block;
+    
     cursor: pointer;
+
+    width: fit-content;
     padding: 5px 13px;
     margin: 20px;
     border-radius: 10px;
@@ -59,14 +62,19 @@ button:active {
     background-color: var(--btn-active-bg);
 }
 
-.page-container {
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 1080px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center;
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0 40px;
 }
 
@@ -90,7 +98,7 @@ section {
 }
 
 /**
-* Festival page
+* Festival section
 **/
 
 .festival-events-container {
@@ -178,6 +186,7 @@ section {
 
 .practical-info-items {
     display: flex;
+    width: 100%;
 }
 
 .practical-info-item {
@@ -212,6 +221,7 @@ section {
 
 .practical-info-subsection {
     position: relative;
+    width: 100%;
     margin-bottom: 50px;
 }
 
