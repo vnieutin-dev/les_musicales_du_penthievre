@@ -105,7 +105,7 @@ document.addEventListener('alpine:init', () => {
             const [date1, date2] = rawDates;
             const [d1, m1] = date1.split("/").map(Number);
             const [d2, m2] = date2.split("/").map(Number);
-            const month = MONTHS[m1 - 1];
+            const month = MONTHS[m1 - 1].toUpperCase();
             return `${d1} · ${d2} ${month}`;
         },
         formatProgrammationDate: (rawDate) => {
