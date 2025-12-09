@@ -5,5 +5,5 @@ async function loadPartial(id, file) {
     el.innerHTML = html;
 }
 
-loadPartial("header", "/partials/header.html");
-loadPartial("footer", "/partials/footer.html");
+loadPartial("header", "partials/header.html");
+loadPartial("footer", "partials/footer.html");
