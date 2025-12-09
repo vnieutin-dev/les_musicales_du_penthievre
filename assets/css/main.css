@@ -264,15 +264,22 @@ header>button {
 * Footer
 **/
 footer {
+    position: relative;
     display: flex;
-    gap: 100px;
+    justify-content: center;
     padding: 50px 40px 10px;
     color: var(--background);
     background-color: var(--secondary-bg);
 }
 
-footer > * {
-    position: relative;
+.footer-wrapper {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    max-width: 1080px;
+}
+
+.footer-wrapper > * {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -333,9 +340,15 @@ footer > * {
     margin-bottom: 20px;
 }
 
+footer a {
+    text-decoration: underline;
+}
+
 .footer-credits {
     position: absolute;
-    bottom: 0;
+    right: 15px;
+    bottom: 10px;
+    width: 100%;
     text-align: right;
     font-size: 14px;
 }
