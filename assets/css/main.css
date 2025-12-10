@@ -301,43 +301,41 @@ header>button {
 * Footer
 **/
 footer {
-    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 50px 40px 10px;
+    padding: 2.5em 2em 0.5em;
     color: var(--background);
     background-color: var(--secondary-bg);
 }
 
 .footer-wrapper {
-    display: flex;
-    gap: 100px;
-    width: 100%;
     max-width: 1080px;
+    display: flex;
+    gap: 4em;
+}
+
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+    }
 }
 
 .footer-wrapper>* {
     display: flex;
     flex-direction: column;
-    flex: 1;
-}
-
-.footer-left {
-    align-items: center;
-    margin-bottom: 40px;
 }
 
 .footer-left>* {
-    width: 100%;
-    justify-content: center;
     margin-bottom: 15px;
 }
 
 .footer-logo {
+    height: 9em;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
     text-align: center;
 
     background-color: wheat;
@@ -345,17 +343,16 @@ footer {
 }
 
 .footer-date {
-    height: fit-content;
-    width: fit-content;
     text-align: center;
-    padding: 15px 20px;
+    padding: 0.33em 0.44em;
     font-size: 2.25rem;
     font-weight: 500;
     border: 3px var(--background) solid;
 }
 
 .footer-festival-location {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -371,10 +368,22 @@ footer {
 
 .footer-right {
     align-items: flex-start;
+    justify-content: center;
 }
 
 .footer-right>* {
-    margin-bottom: 20px;
+    align-self: stretch;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+    .footer-right {
+        align-items: center;
+    }
+
+    .footer-right>* {
+        text-align: center;
+    }
 }
 
 footer a {
@@ -382,10 +391,7 @@ footer a {
 }
 
 .footer-credits {
-    position: absolute;
-    right: 15px;
-    bottom: 10px;
-    width: 100%;
-    text-align: right;
+    margin-top: 5em;
+    text-align: center;
     font-size: 0.7rem;
 }
