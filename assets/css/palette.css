@@ -11,6 +11,10 @@
 
   --secondary-bg: rgb(53, 20, 4);
   --secondary-text: rgb(53, 20, 4);
+
+  --navlink-color: rgb(255, 216, 166);
+  --navlink-hover-color: rgb(255, 203, 134);
+  --navlink-active-color: rgb(248, 204, 147);
 }
 
 @font-face {

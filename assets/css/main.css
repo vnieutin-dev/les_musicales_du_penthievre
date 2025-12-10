@@ -286,15 +286,56 @@ section {
 * Header
 **/
 header {
-    width: 100%;
-    height: 100px;
+    display: flex;
+    height: 3em;
     margin-bottom: 2em;
-    text-align: right;
+    padding-bottom: 1em;
     background-color: var(--secondary-bg);
 }
 
-header>button {
-    margin: 30px 30px 0 0;
+.navbar {
+    flex: 1;
+    display: flex;
+}
+
+.navbar-desktop {
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3em;
+}
+
+.navbar-mobile {
+    display: none;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+    }
+}
+
+.menu-icon {
+    height: 1em;
+}
+
+.navlink {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--navlink-color);
+}
+
+.navlink:hover {
+    color: var(--navlink-hover-color);
+    text-decoration: none;
+}
+
+.navlink:active {
+    color: var(--navlink-active-color);
 }
 
 /**
