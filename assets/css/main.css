@@ -4,14 +4,17 @@
 * Default style overwrite
 **/
 
+html {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 300;
+    font-size: clamp(16px, 2vw, 20px);
+    background-color: var(--background);
+    color: var(--text);
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    background-color: var(--background);
-    color: var(--text);
 }
 
 a {
@@ -27,30 +30,25 @@ a:hover {
 h1 {
     width: fit-content;
     border-top: 3px var(--secondary-text) solid;
-    font-size: 45px;
-    line-height: 35px;
-    margin: 0 auto 60px;
+    font-size: 2.25rem;
+    line-height: 0.78em;
+    margin: 0 auto 3rem;
     color: var(--secondary-text);
-}
-
-h2 {
-    font-weight: 400;
-    margin: 0 0 50px;
 }
 
 button {
     all: unset;
     display: inline-block;
-    
+
     cursor: pointer;
 
     width: fit-content;
-    padding: 5px 13px;
-    margin: 20px;
+    padding: 0.125em 0.325em;
+    margin: 0.5em;
     border-radius: 10px;
     background-color: var(--btn-bg);
     color: var(--btn-text);
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -68,21 +66,28 @@ main {
     align-items: center;
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.5rem;
 }
 
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0 40px;
+    margin: 1em 0 2em;
 }
 
 .section-content {
     column-count: 3;
-    column-gap: 50px;
+    column-gap: 2.5em;
     text-align: justify;
-    margin-bottom: 60px;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .section-content {
+        column-count: 1;
+        column-gap: 0;
+    }
 }
 
 .subsection-title {
@@ -110,8 +115,7 @@ section {
 .festival-events-wrapper {
     display: flex;
     width: 100%;
-    max-width: 1080px;
-    margin-bottom: 40px;
+    margin-bottom: 2em;
 }
 
 .event-container {
@@ -133,25 +137,28 @@ section {
 
 .event-date {
     width: fit-content;
-    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 2.5rem;
+    padding: 0.75em;
     color: rgb(255, 245, 224);
 }
 
 .event-details {
     display: flex;
     flex-direction: column;
-    margin: 10px 0 20px;
+    margin: 0.5em 0 1em;
     color: rgb(59, 0, 0);
 }
 
 .festival-events-wrapper>.event-container:first-of-type .event-details {
     align-items: flex-end;
-    padding-right: 15px;
+    padding-right: 0.75em;
 }
 
 .festival-events-wrapper>.event-container:last-of-type .event-details {
     align-items: flex-start;
-    padding-left: 15px;
+    padding-left: 0.75em;
 }
 
 .festival-events-wrapper>.event-container:first-of-type .event-details>* {
@@ -184,15 +191,21 @@ section {
     font-style: italic;
 }
 
-.practical-info-items {
+.practical-info-wrapper {
     display: flex;
-    width: 100%;
+    gap: 2em;
+}
+
+@media (max-width: 768px) {
+    .practical-info-wrapper {
+        flex-direction: column;
+    }
 }
 
 .practical-info-item {
     display: flex;
     flex-grow: 1;
-    align-items: flex-end;
+    align-items: center;
     text-align: left;
 }
 
@@ -200,58 +213,72 @@ section {
     justify-content: flex-end;
 }
 
+@media (max-width: 768px) {
+    .practical-info-item:last-child {
+        justify-content: flex-start;
+    }
+}
+
+.practical-info-img-wrapper {
+    max-width: 5rem;
+}
+
 .practical-info-img {
-    width: 100px;
+    max-width: 100%;
+    height: auto;
 }
 
 .practical-info-txt {
-    margin-left: 20px;
+    margin-left: 1rem;
 }
 
 .practical-info-txt-date {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .practical-info-map {
-    margin: 50px;
-    height: 600px;
-    max-width: 85%;
+    height: 30rem;
+    margin: 2.5em;
 }
 
 .practical-info-subsection {
     position: relative;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 1.5em;
 }
 
-.practical-info-subsection-items {
+.practical-info-subsection-wrapper {
     display: flex;
     text-align: left;
+    gap: 2em;
 }
 
-.practical-info-subsection-items>* {
+.practical-info-subsection-wrapper>* {
     flex: 1;
 }
 
-.practical-info-subsection-items> :nth-child(2) {
-    margin: 0 40px;
+@media (max-width: 768px) {
+    .practical-info-subsection-wrapper {
+        flex-direction: column;
+        gap: 1em;
+    }
 }
 
-.practical-info-subsection-items p {
+.practical-info-subsection-wrapper p {
     margin: 0;
 }
 
-.practical-info-subsection-items ul {
+.practical-info-subsection-wrapper ul {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 1em;
 }
 
 .subsubsection-footnote {
-    margin: 0 0 20px;
+    margin: 1em 0;
+    font-size: 0.8rem;
     text-align: right;
     font-style: italic;
-    font-size: 20px;
 }
 
 
@@ -260,8 +287,8 @@ section {
 **/
 header {
     width: 100%;
-    height: 200px;
-    margin-bottom: 40px;
+    height: 100px;
+    margin-bottom: 2em;
     text-align: right;
     background-color: var(--secondary-bg);
 }
@@ -289,7 +316,7 @@ footer {
     max-width: 1080px;
 }
 
-.footer-wrapper > * {
+.footer-wrapper>* {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -300,7 +327,7 @@ footer {
     margin-bottom: 40px;
 }
 
-.footer-left > * {
+.footer-left>* {
     width: 100%;
     justify-content: center;
     margin-bottom: 15px;
@@ -312,7 +339,7 @@ footer {
     align-items: center;
     height: 150px;
     text-align: center;
-    
+
     background-color: wheat;
     color: black;
 }
@@ -322,18 +349,18 @@ footer {
     width: fit-content;
     text-align: center;
     padding: 15px 20px;
-    font-size: 45px;
+    font-size: 2.25rem;
     font-weight: 500;
     border: 3px var(--background) solid;
 }
 
 .footer-festival-location {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 .footer-festival-name {
-    font-size: 25px;
+    font-size: 1.25rem;
     font-weight: 500;
     text-align: center;
     color: var(--background);
@@ -346,7 +373,7 @@ footer {
     align-items: flex-start;
 }
 
-.footer-right > * {
+.footer-right>* {
     margin-bottom: 20px;
 }
 
@@ -360,5 +387,5 @@ footer a {
     bottom: 10px;
     width: 100%;
     text-align: right;
-    font-size: 14px;
+    font-size: 0.7rem;
 }
