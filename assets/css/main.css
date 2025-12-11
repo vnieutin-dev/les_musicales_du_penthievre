@@ -46,7 +46,7 @@ h1 {
     color: var(--secondary-text);
 }
 
-button {
+.button {
     all: unset;
     display: inline-block;
 
@@ -62,11 +62,11 @@ button {
     font-weight: 700;
 }
 
-button:hover {
+.button:hover {
     background-color: var(--btn-hover-bg);
 }
 
-button:active {
+.button:active {
     background-color: var(--btn-active-bg);
 }
 
@@ -110,6 +110,10 @@ section {
     font-weight: 400;
     margin: 0;
     color: var(--secondary-text);
+}
+
+.text-center {
+    text-align: center;
 }
 
 /**
@@ -252,34 +256,34 @@ section {
     margin: 2.5em;
 }
 
-.practical-info-subsection {
+.subsection {
     position: relative;
     width: 100%;
     margin-bottom: 1.5em;
 }
 
-.practical-info-subsection-wrapper {
+.subsection-wrapper {
     display: flex;
     text-align: left;
     gap: 2em;
 }
 
-.practical-info-subsection-wrapper>* {
+.subsection-wrapper>* {
     flex: 1;
 }
 
 @media (max-width: 768px) {
-    .practical-info-subsection-wrapper {
+    .subsection-wrapper {
         flex-direction: column;
         gap: 1em;
     }
 }
 
-.practical-info-subsection-wrapper p {
+.subsection-wrapper p {
     margin: 0;
 }
 
-.practical-info-subsection-wrapper ul {
+.subsection-wrapper ul {
     margin: 0;
     padding-left: 1em;
 }
@@ -317,9 +321,11 @@ header {
     font-size: 1.2rem;
 }
 
-.navbar-mobile {
+.navbar-mobile,
+.mobile-menu {
     display: none;
 }
+
 
 @media (max-width: 768px) {
     header {
@@ -345,10 +351,11 @@ header {
     }
 
     .mobile-menu {
+        display: flex;
         position: absolute;
         top: 100%;
         width: 100%;
-        height: calc(100vh - 3.5em);
+        height: calc(100vh - 3.5em - 1.8em);
         background-color: var(--secondary-bg);
         font-size: 1.5rem;
         padding: 1.8em 0;
